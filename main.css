@@ -1,0 +1,18 @@
+body { background-color: #ddd; }
+.full_wrap { background-color: white; width: 700px; margin: 0 auto;}
+
+.hero_wrap { outline: 0px solid red; height: 200px; }
+.hero_text { outline: 0px solid black; text-align: center; position: relative; top: 150px; }
+.text { font-size: 60px; color: #832DB4; }
+
+.input_data { position: relative; left: 200px; padding-top: 50px; }
+input[type="text"] { width: 250px; height: 16px; }
+.submit { cursor: pointer; }
+
+.text_wrap { outline: 0px solid red; }
+.info_text { text-align: center; font-size: 13px; }
+
+.pics_wrap { outline: 0px solid red; min-height: 250px; }
+.pics_data { outline: 0px dotted blue; width: 700px; margin: 0 auto; padding: 5px; position: relative; right: 25px; }
+.pic_tile { height: 200px; width: 200px; border: 3px solid #eee; display: inline-block; margin: 10px; position: relative; left: 25px; }
+.tile_one img { width: 100%; }
