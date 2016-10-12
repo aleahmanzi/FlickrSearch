@@ -2,9 +2,8 @@
 <html lang="en" ng-app="demo" ng-controller="ctrl">
 <head>
 	<meta charset="UTF-8">
-	<title>Flickr_Searcher</title>
+	<title>Flickr Searcher</title>
   
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
 	<script src="https://code.angularjs.org/1.3.15/angular-animate.js" type="text/javascript"></script>
   <script type="text/javascript" src="app.js"></script>
@@ -18,7 +17,7 @@
    <div class="hero_text">
     <p class="text">Flickr Searcher</p>
    </div><!-- . hero_text - -->
-  </div><! . hero_data - -->
+  </div><!-- . hero_data - -->
  </header><!-- . hero_wrap - -->
 
  <section class="input_wrap">
@@ -30,14 +29,14 @@
 
  <section class="text_wrap">
   <div class="text_data">
-   <p ng-show="searching" ng-hide="!searching" class="info_text">Searching Instagram for {{ searchTag }}</p>
-   <p ng-show="results" ng-hide="!results" class="info_text">We found {{ totalResults | number }} images of {{ searchTag }}</p>
-   <p ng-show="error" ng-hide="!error" class="info_text">Sorry! Something went wrong, please try again.</p>
+   <p ng-show="searching" class="info_text">Searching Instagram for {{ searchTag }}</p>
+   <p ng-show="results" class="info_text">We found {{ totalResults | number }} images of {{ searchTag }}</p>
+   <p ng-show="error" class="info_text">Sorry! Something went wrong, please try again.</p>
   </div><!-- . text_data - -->
  </section><!-- . text_wrap - -->
 
  <section class="pics_wrap">
-  <div class="pics_data" ng-show="showPhotos" ng-hide="!showPhotos">
+  <div class="pics_data" ng-show="showPhotos">
    <img class="pic_tile" ng-repeat="photo in photos" ng-src='{{photoUrl(photo)}}'/>
   </div><!-- . pics_data - -->
  </section><!-- . pics_wrap - -->

@@ -5,10 +5,6 @@ var demo = angular.module('demo', []);
     var url = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server +"/" + photo.id + "_" + photo.secret + "_q.jpg";
     return $sce.trustAsResourceUrl(url);
   };
-
- 	$scope.trustSrc = function(src) {
-		return $sce.trustAsResourceUrl(src);
-	};
   	
   	$scope.tag_input = "";
   	$scope.results = false;
@@ -18,7 +14,6 @@ var demo = angular.module('demo', []);
   	$scope.searchTag = "";
 
   $scope.searchPhotos = function(searchTag){
-  	console.log("works!");
   	$scope.searching = true;
   	$scope.searchTag = searchTag;
 
@@ -35,9 +30,8 @@ var demo = angular.module('demo', []);
 		params: request,
 	})
   	.then(function(data){
-  		console.log("yes!", data);
   		$scope.searching = false;
-  		$scope.searcTag = "";
+  		$scope.searchTag = "";
   		$scope.results = true;
   		$scope.showPhotos = true;
   		$scope.totalResults = data.data.photos.total;
