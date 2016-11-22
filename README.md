@@ -1,2 +1,0 @@
-# FlickrSearch
-Flickr Search App

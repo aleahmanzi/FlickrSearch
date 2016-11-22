@@ -1,18 +1,36 @@
 body { background-color: #ddd; }
-.full_wrap { background-color: white; width: 700px; margin: 0 auto;}
+.full_wrap { background-color: white; width: 400px; margin: 0 auto; font-family: "Roboto"; }
 
-.hero_wrap { outline: 0px solid red; height: 200px; }
-.hero_text { outline: 0px solid black; text-align: center; position: relative; top: 150px; }
-.text { font-size: 60px; color: #832DB4; }
+.camera { height: 150px; }
+.hero_wrap { outline: 0px solid red; height: 100px; }
+.hero_text { outline: 0px solid black; text-align: center; position: relative; font-family: "Erica One"; }
+.text { font-size: 40px; color: #832DB4; }
 
-.input_data { position: relative; left: 200px; padding-top: 50px; }
-input[type="text"] { width: 250px; height: 16px; }
-.submit { cursor: pointer; }
+.input_data { position: relative; left: 50px; padding-top: 150px; }
+input[type="text"] { width: 250px; height: 25px; }
+.submit { cursor: pointer; border-radius: 2px; }
 
 .text_wrap { outline: 0px solid red; }
 .info_text { text-align: center; font-size: 13px; }
 
-.pics_wrap { outline: 0px solid red; min-height: 250px; }
-.pics_data { outline: 0px dotted blue; width: 700px; margin: 0 auto; padding: 5px; position: relative; right: 25px; }
-.pic_tile { height: 200px; width: 200px; border: 3px solid #eee; display: inline-block; margin: 10px; position: relative; left: 25px; }
+.pics_wrap { outline: 0px solid red; min-height: 150px; }
+.pics_data { outline: 0px dotted blue; width: 400px; margin: 0 auto; padding: 5px; position: relative; right: 25px; }
+.pic_tile { height: 100px; width: 100px; border: 3px solid #eee; display: inline-block; margin: 10px; position: relative; left: 25px; }
 .tile_one img { width: 100%; }
+
+@media only screen and (min-width: 768px) { 
+.full_wrap { width: 700px; }
+.camera { height: 200px; }
+.text { font-size: 60px; }
+.input_data { padding-top: 200px; left: 200px; }
+.pics_data { width: 700px; }
+.pic_tile { height: 200px; width: 200px; }
+}
+
+@media only screen and (min-width: 1200px) { 
+.full_wrap { width: 900px; }
+.camera { height: 300px; }
+.text { font-size: 70px; }
+.input_data { padding-top: 325px; left: 300px; }
+.pics_data { width: 900px; }
+}
