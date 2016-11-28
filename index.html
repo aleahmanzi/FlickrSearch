@@ -42,12 +42,12 @@
 
  <section class="pics_wrap">
   <div class="pics_data" ng-show="showPhotos">
-   <img class="pic_tile" ng-repeat="photo in photos | limitTo: 50" ng-src='{{photoUrl(photo)}}'/>
+   <img class="pic_tile" ng-repeat="photo in photos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-src='{{photoUrl(photo)}}'/>
   </div><!-- . pics_data - -->
  </section><!-- . pics_wrap - -->
 </div><!-- . full_wrap - -->
 
-<ul class="pager">
+<ul class="pager" ng-show="showNext">
   <li ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><a href="#">Previous</a></li>
   {{currentPage+1}}/{{numberOfPages()}}
   <li ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1"><a href="#">Next</a></li>

@@ -11,9 +11,10 @@ var demo = angular.module('demo', []);
     $scope.error = false;
     $scope.searching = false;
     $scope.showPhotos = false;
+    $scope.showNext = false;
     $scope.searchTag = "";
-   $scope.currentPage = 0;
-    $scope.pageSize = 10;
+    $scope.currentPage = 0;
+    $scope.pageSize = 25;
     $scope.data = [];
     $scope.q = '';
 
@@ -38,6 +39,7 @@ var demo = angular.module('demo', []);
       $scope.searchTag = "";
       $scope.results = true;
       $scope.showPhotos = true;
+      $scope.showNext = true;
       $scope.totalResults = data.data.photos.total;
       $scope.photos = data.data.photos.photo;
     }),
@@ -52,20 +54,15 @@ var demo = angular.module('demo', []);
     }
     
     $scope.numberOfPages=function(){
-        return Math.ceil($scope.getData().length/$scope.pageSize);                
+        return Math.ceil($scope.totalResults/$scope.pageSize);                
     }
+  }); /// - ctrl  
     
-    for (var i=0; i<65; i++) {
-        $scope.data.push("Item "+i);
-    }
-
-//We already have a limitTo filter built-in to angular,
-//let's make a startFrom filter
 demo.filter('startFrom', function() {
+   console.log("test")
     return function(input, start) {
         start = +start; //parse to int
         return input.slice(start);
     }
   });
-
-  }); /// - ctrl
+  
