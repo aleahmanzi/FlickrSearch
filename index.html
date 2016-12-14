@@ -10,7 +10,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="main.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Erica+One|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Erica+One|Roboto|Roboto:900" rel="stylesheet">
+
 
 </head>
 
@@ -26,10 +27,10 @@
  </header><!-- . hero_wrap - -->
 
  <section class="input_wrap">
-  <div class="input_data">
+  <form class="input_data" ng-submit="searchPhotos(searchTag)">
     <input class="input-lg col-lg-*" type="text" ng-model="searchTag" placeholder="Enter a tag to search for" required />
     <input type="submit" class="submit" value="Search" ng-click="searchPhotos(searchTag)"/>
-  </div><!-- . input_data - -->
+  </form><!-- . input_data - -->
  </section><!-- . input_wrap - -->
 
  <section class="text_wrap">

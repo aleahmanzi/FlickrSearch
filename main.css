@@ -8,13 +8,14 @@ body { background-color: #ddd; }
 
 .input_data { position: relative; left: 50px; padding-top: 150px; }
 input[type="text"] { width: 250px; height: 25px; }
-.submit { cursor: pointer; border-radius: 2px; }
+.submit { cursor: pointer; border-radius: 2px; font-size: 15px; border-radius: 5px; color: #832DB4; font-weight: bold; }
+.submit:hover { color: #CD5EA1; }
 
 .text_wrap { outline: 0px solid red; }
 .info_text { text-align: center; font-size: 13px; }
 
 .pics_wrap { outline: 0px solid red; min-height: 150px; }
-.pics_data { outline: 0px dotted blue; width: 400px; margin: 0 auto; padding: 5px; position: relative; right: 25px; }
+.pics_data { outline: 0px dotted blue; width: 400px; margin: 0 auto; padding: 5px; position: relative; right: 10px; }
 .pic_tile { height: 100px; width: 100px; border: 3px solid #eee; display: inline-block; margin: 10px; position: relative; left: 25px; }
 .tile_one img { width: 100%; }
 
